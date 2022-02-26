@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	BC3409 Final Assignment (Jefferson Li)
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/stylesheet.css') }}">
+</head>
+<body>
+	<div class="tabs">
+	   <div class="tab">
+			<input type="radio" id="tab-1" name="tab-group-1" checked>
+			<label for="tab-1">Logistic Regression</label>
+
+			<div class="content">
+				<form action="http://127.0.0.1:5000" method="post">
+<!-- 					<p>Please enter the income: </p>
+					<p><input type="number" step="0.01" name="incomelr" placeholder="Type here..." min="0"/></p> -->
+					<p>- Income detail not required -</p>
+					<br/>
+					<p>Please enter the age: </p>
+					<p><input type="number" step="1" name="agelr" placeholder="Type here..." min="0"/></p>
+					<p>Please enter the loan amount: </p>
+					<p><input type="number" step="0.01" name="loanlr" placeholder="Type here..." min="0"/></p>
+					<p><input type="submit" value="Enter" name='lr'/></p>
+				</form>
+				{{resultlr}}
+			</div> 
+		</div>
+
+		<div class="tab">
+			<input type="radio" id="tab-2" name="tab-group-1" {{"checked" if carttab else ""}}>
+			<label for="tab-2">CART</label>
+
+			<div class="content">
+				<form action="http://127.0.0.1:5000" method="post">
+					<p>Please enter the income: </p>
+					<p><input type="number" step="0.01" name="incomecart" placeholder="Type here..." min="0"/></p>
+					<p>Please enter the age: </p>
+					<p><input type="number" step="1" name="agecart" placeholder="Type here..." min="0"/></p>
+					<p>Please enter the loan amount: </p>
+					<p><input type="number" step="0.01" name="loancart" placeholder="Type here..." min="0"/></p>
+					<p><input type="submit" value="Enter" name='cart'/></p>
+				</form>
+				{{resultcart}}
+			</div> 
+		</div>
+
+		<div class="tab">
+			<input type="radio" id="tab-3" name="tab-group-1" {{"checked" if rftab else ""}}>
+			<label for="tab-3">Random Forest</label>
+
+			<div class="content">
+				<form action="http://127.0.0.1:5000" method="post">
+					<p>Please enter the income: </p>
+					<p><input type="number" step="0.01" name="incomerf" placeholder="Type here..." min="0"/></p>
+					<p>Please enter the age: </p>
+					<p><input type="number" step="1" name="agerf" placeholder="Type here..." min="0"/></p>
+					<p>Please enter the loan amount: </p>
+					<p><input type="number" step="0.01" name="loanrf" placeholder="Type here..." min="0"/></p>
+					<p><input type="submit" value="Enter"  name='rf'/></p>
+				</form>
+				{{resultrf}}
+			</div> 
+		</div>
+
+		<div class="tab">
+			<input type="radio" id="tab-4" name="tab-group-1" {{"checked" if xgbtab else ""}}>
+			<label for="tab-4">XGBoost</label>
+
+			<div class="content">
+				<form action="http://127.0.0.1:5000" method="post">
+					<p>Please enter the income: </p>
+					<p><input type="number" step="0.01" name="incomexgb" placeholder="Type here..." min="0"/></p>
+					<p>Please enter the age: </p>
+					<p><input type="number" step="1" name="agexgb" placeholder="Type here..." min="0"/></p>
+					<p>Please enter the loan amount: </p>
+					<p><input type="number" step="0.01" name="loanxgb" placeholder="Type here..." min="0"/></p>
+					<p><input type="submit" value="Enter"  name='xgb'/></p>
+				</form>
+				{{resultxgb}}
+			</div> 
+		</div>
+
+		<div class="tab">
+			<input type="radio" id="tab-5" name="tab-group-1"  {{"checked" if nntab else ""}}>
+			<label for="tab-5">Neural Network</label>
+
+			<div class="content">
+				<form action="http://127.0.0.1:5000" method="post">
+					<p>Please enter the income: </p>
+					<p><input type="number" step="0.01" name="incomenn" placeholder="Type here..." min="0"/></p>
+					<p>Please enter the age: </p>
+					<p><input type="number" step="1" name="agenn" placeholder="Type here..." min="0"/></p>
+					<p>Please enter the loan amount: </p>
+					<p><input type="number" step="0.01" name="loannn" placeholder="Type here..." min="0"/></p>
+					<p><input type="submit" value="Enter" name='nn'/></p>
+				</form>
+				{{resultnn}}
+			</div> 
+		</div>
+
+<!-- 		<div class="tab">
+			<input type="radio" id="tab-6" name="tab-group-1" >
+			<label for="tab-6">Previous results</label>
+
+			<div class="content">
+				{{testlist}}
+			</div> 
+		</div> -->
+
+	</div>  
+</body>
+</html>
