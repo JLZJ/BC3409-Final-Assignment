@@ -5,15 +5,18 @@
 
 
 from flask import Flask, session
+from flask_session import Session 
 import os
 import joblib
-
 
 # In[2]:
 
 
 app = Flask(__name__)
 app.secret_key = os.urandom(12).hex()
+app.config["SESSION_PERMANENT"] = True
+app.config["SESSION_TYPE"] = "filesystem"
+Session(app)
 
 
 # In[3]:
