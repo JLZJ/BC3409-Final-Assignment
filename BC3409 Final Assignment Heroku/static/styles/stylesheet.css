@@ -1,18 +1,26 @@
+.header {
+  font-weight: bold;
+  font-size: larger;
+  padding-left: 20px;
+}
 .tabs {
   position: relative;   
-  min-height: 90vh; /* This part sucks */
+  min-height: 85vh; 
+  max-width: 50hh;
   clear: both;
   margin: 35px 0;
+  display: inline-flex;
+  right: -8px;
 }
 .tab {
   float: left;
 }
 .tab label {
-  background: lightblue; 
+  background: #deb; 
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   padding: 12px; 
-  border: 4px solid lightblue; 
+  border: 4px solid #deb; 
   margin-left: 8px; 
   position: relative;
   left: -8px; 
@@ -26,7 +34,7 @@
   top: 28px;
   left: 0;
   background: white;
-  right: 0;
+  right: 8px;
   bottom: 0;
   padding: 20px;
   border: 4px solid powderblue; 
@@ -51,16 +59,22 @@ input[type=number] {
   border-radius: 10px;
 }
 input[type=number]:focus {
-  border: 3px solid black;
-  background-color: lightblue;
+  border: 3px solid #111;
+  background-color: #efe;
 }
 [type=radio]:checked ~ label {
-  background: white;
-  border: 4px solid powderblue;
-  border-bottom: 4px solid white;
-
+  background: powderblue;
+  
+  border: 4px solid powderblue; 
+  border-bottom: 0px;
   z-index: 2;
 }
+
 [type=radio]:checked ~ label ~ .content {
   z-index: 1;
+}
+
+.italicize {
+  font-size: small;
+  font-style: italic;
 }
