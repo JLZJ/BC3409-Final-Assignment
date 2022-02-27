@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	BC3409 Final Assignment (Jefferson Li)
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/stylesheet.css') }}">
 </head>
 <body>
+	<p class="header">BC3409 Final Assignment (Jefferson Li)</p>
 	<div class="tabs">
 	   <div class="tab">
 			<input type="radio" id="tab-1" name="tab-group-1" checked>
@@ -13,8 +13,6 @@
 
 			<div class="content">
 				<form action="/" method="post">
-<!-- 					<p>Please enter the income: </p>
-					<p><input type="number" step="0.01" name="incomelr" placeholder="Type here..." min="0"/></p> -->
 					<p>- Income detail not required -</p>
 					<br/>
 					<p>Please enter the age: </p>
@@ -99,14 +97,18 @@
 			</div> 
 		</div>
 
-<!-- 		<div class="tab">
+		<div class="tab">
 			<input type="radio" id="tab-6" name="tab-group-1" >
-			<label for="tab-6">Previous results</label>
+			<label for="tab-6">Previous Results</label>
 
 			<div class="content">
-				{{testlist}}
+				{% for val in past_vals %}
+					<p>{{val}}</p>
+				{% endfor %}
+				<br/>
+				<p class="italicize">(only the last 10 values will be captured)</p>
 			</div> 
-		</div> -->
+		</div>
 
 	</div>  
 </body>
